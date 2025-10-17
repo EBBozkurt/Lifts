@@ -1,6 +1,6 @@
 # Lifts
 
-> Track lifts, push commits, merge gains - The vibecoder's workout tracker
+> Track lifts, push commits, merge gains.. (Examples are dummy, adjust them before use.)
 
 **[How to Use](#how-to-use)**
 
@@ -199,4 +199,4 @@ All dependencies are automatically installed by GitHub Actions.
 
 ---
 
-*Made by vibecoder, for vibecoders 🚀*
+*For vibecode*
