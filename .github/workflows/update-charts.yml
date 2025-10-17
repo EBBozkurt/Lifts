@@ -21,6 +21,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Pull latest changes
+      run: git pull --rebase
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -43,7 +46,6 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git pull --rebase
         git add charts/ README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update bodyweight charts [skip ci]" && git push)
 
@@ -54,6 +56,9 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Pull latest changes
+      run: git pull --rebase
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -77,6 +82,5 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git pull --rebase
         git add charts/ README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update gym lift charts [skip ci]" && git push)

@@ -33,6 +33,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Pull latest changes
+      run: git pull --rebase
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -78,6 +81,5 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git pull --rebase
         git add data/gym_lifts.json charts/ README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update gym workout: ${{ inputs.exercise }} [skip ci]" && git push)
