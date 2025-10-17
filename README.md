@@ -13,13 +13,13 @@
 <td width="50%">
 
 ### Pull Ups
-![Pull Ups](charts/pull_ups.png?t=20251017111300)
+![Pull Ups](charts/pull_ups_20251017112050.png)
 
 </td>
 <td width="50%">
 
 ### Dips
-![Dips](charts/dips.png?t=20251017111300)
+![Dips](charts/dips_20251017112050.png)
 
 </td>
 </tr>
@@ -27,13 +27,13 @@
 <td width="50%">
 
 ### Pushups
-![Pushups](charts/pushups.png?t=20251017111300)
+![Pushups](charts/pushups_20251017112050.png)
 
 </td>
 <td width="50%">
 
 ### Bodyweight Squats
-![Bodyweight Squats](charts/bodyweight_squats.png?t=20251017111300)
+![Bodyweight Squats](charts/bodyweight_squats_20251017112050.png)
 
 </td>
 </tr>
@@ -46,13 +46,13 @@
 <td width="50%">
 
 ### Bench Press
-![Bench Press](charts/bench_press.png?t=20251017111300)
+![Bench Press](charts/bench_press_20251017131725.png)
 
 </td>
 <td width="50%">
 
 ### Squat
-![Squat](charts/squat.png?t=20251017111300)
+![Squat](charts/squat_20251017131725.png)
 
 </td>
 </tr>
@@ -60,13 +60,13 @@
 <td width="50%">
 
 ### Deadlift
-![Deadlift](charts/deadlift.png?t=20251017111300)
+![Deadlift](charts/deadlift_20251017131725.png)
 
 </td>
 <td width="50%">
 
 ### Overhead Press
-![Overhead Press](charts/overhead_press.png?t=20251017111300)
+![Overhead Press](charts/overhead_press_20251017131725.png)
 
 </td>
 </tr>
