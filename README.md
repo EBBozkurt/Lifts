@@ -13,13 +13,13 @@
 <td width="50%">
 
 ### Pull Ups
-![Pull Ups](charts/pull_ups_20251017131719.png)
+![Pull Ups](charts/pull_ups_20251017111936.png)
 
 </td>
 <td width="50%">
 
 ### Dips
-![Dips](charts/dips_20251017131719.png)
+![Dips](charts/dips_20251017111936.png)
 
 </td>
 </tr>
@@ -27,13 +27,13 @@
 <td width="50%">
 
 ### Pushups
-![Pushups](charts/pushups_20251017131719.png)
+![Pushups](charts/pushups_20251017111936.png)
 
 </td>
 <td width="50%">
 
 ### Bodyweight Squats
-![Bodyweight Squats](charts/bodyweight_squats_20251017131719.png)
+![Bodyweight Squats](charts/bodyweight_squats_20251017111936.png)
 
 </td>
 </tr>
