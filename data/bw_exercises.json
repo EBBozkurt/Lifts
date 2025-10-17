@@ -1,0 +1,52 @@
+{
+  "exercises": {
+    "pull_ups": {
+      "current": 7,
+      "history": [
+        2,
+        3,
+        4,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    "dips": {
+      "current": 10,
+      "history": [
+        5,
+        7,
+        6,
+        8,
+        9,
+        8,
+        10
+      ]
+    },
+    "pushups": {
+      "current": 15,
+      "history": [
+        8,
+        10,
+        12,
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "bodyweight_squats": {
+      "current": 18,
+      "history": [
+        15,
+        18,
+        20,
+        19,
+        22,
+        20,
+        18
+      ]
+    }
+  }
+}

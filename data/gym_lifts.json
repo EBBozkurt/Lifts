@@ -1,0 +1,132 @@
+{
+  "exercises": {
+    "bench_press": {
+      "current_weight": 70,
+      "current_reps": 5,
+      "history": [
+        {
+          "weight": 50,
+          "reps": 5
+        },
+        {
+          "weight": 55,
+          "reps": 5
+        },
+        {
+          "weight": 60,
+          "reps": 5
+        },
+        {
+          "weight": 57,
+          "reps": 6
+        },
+        {
+          "weight": 65,
+          "reps": 5
+        },
+        {
+          "weight": 67,
+          "reps": 4
+        },
+        {
+          "weight": 70,
+          "reps": 5
+        }
+      ]
+    },
+    "squat": {
+      "current_weight": 75,
+      "current_reps": 5,
+      "history": [
+        {
+          "weight": 60,
+          "reps": 5
+        },
+        {
+          "weight": 70,
+          "reps": 5
+        },
+        {
+          "weight": 75,
+          "reps": 4
+        },
+        {
+          "weight": 80,
+          "reps": 5
+        },
+        {
+          "weight": 78,
+          "reps": 5
+        },
+        {
+          "weight": 75,
+          "reps": 5
+        }
+      ]
+    },
+    "deadlift": {
+      "current_weight": 120,
+      "current_reps": 5,
+      "history": [
+        {
+          "weight": 80,
+          "reps": 5
+        },
+        {
+          "weight": 90,
+          "reps": 5
+        },
+        {
+          "weight": 100,
+          "reps": 5
+        },
+        {
+          "weight": 95,
+          "reps": 6
+        },
+        {
+          "weight": 110,
+          "reps": 5
+        },
+        {
+          "weight": 115,
+          "reps": 4
+        },
+        {
+          "weight": 120,
+          "reps": 5
+        }
+      ]
+    },
+    "overhead_press": {
+      "current_weight": 38,
+      "current_reps": 5,
+      "history": [
+        {
+          "weight": 30,
+          "reps": 5
+        },
+        {
+          "weight": 35,
+          "reps": 5
+        },
+        {
+          "weight": 40,
+          "reps": 4
+        },
+        {
+          "weight": 42,
+          "reps": 3
+        },
+        {
+          "weight": 40,
+          "reps": 5
+        },
+        {
+          "weight": 38,
+          "reps": 5
+        }
+      ]
+    }
+  }
+}

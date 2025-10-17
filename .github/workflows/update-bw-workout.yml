@@ -1,0 +1,76 @@
+name: Update Bodyweight Workout
+
+on:
+  workflow_dispatch:
+    inputs:
+      pull_ups:
+        description: 'Pull Ups (reps)'
+        required: false
+        type: number
+      dips:
+        description: 'Dips (reps)'
+        required: false
+        type: number
+      pushups:
+        description: 'Pushups (reps)'
+        required: false
+        type: number
+      bodyweight_squats:
+        description: 'Bodyweight Squats (reps)'
+        required: false
+        type: number
+
+jobs:
+  update-workout:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Update workout data
+      run: |
+        python3 << 'EOF'
+        import json
+        from pathlib import Path
+
+        data_file = Path('data/bw_exercises.json')
+        data = json.loads(data_file.read_text())
+
+        # Update values if provided
+        updates = {
+            'pull_ups': '${{ inputs.pull_ups }}',
+            'dips': '${{ inputs.dips }}',
+            'pushups': '${{ inputs.pushups }}',
+            'bodyweight_squats': '${{ inputs.bodyweight_squats }}'
+        }
+
+        for exercise, value in updates.items():
+            if value and value != '':
+                data['exercises'][exercise]['current'] = int(float(value))
+                print(f"✓ Updated {exercise} to {value}")
+
+        data_file.write_text(json.dumps(data, indent=2))
+        print("\n✓ Workout data updated successfully!")
+        EOF
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install matplotlib numpy
+
+    - name: Generate charts
+      run: |
+        python scripts/generate_bw_charts.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add data/bw_exercises.json charts/
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update bodyweight workout [skip ci]" && git push)

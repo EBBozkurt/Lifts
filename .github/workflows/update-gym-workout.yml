@@ -1,0 +1,74 @@
+name: Update Gym Workout
+
+on:
+  workflow_dispatch:
+    inputs:
+      exercise:
+        description: 'Exercise'
+        required: true
+        type: choice
+        options:
+          - bench_press
+          - squat
+          - deadlift
+          - overhead_press
+      weight:
+        description: 'Weight (kg)'
+        required: true
+        type: number
+      reps:
+        description: 'Reps'
+        required: true
+        type: number
+
+jobs:
+  update-workout:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Update workout data
+      run: |
+        python3 << 'EOF'
+        import json
+        from pathlib import Path
+
+        data_file = Path('data/gym_lifts.json')
+        data = json.loads(data_file.read_text())
+
+        exercise = '${{ inputs.exercise }}'
+        weight = int(float('${{ inputs.weight }}'))
+        reps = int(float('${{ inputs.reps }}'))
+
+        data['exercises'][exercise]['current_weight'] = weight
+        data['exercises'][exercise]['current_reps'] = reps
+
+        data_file.write_text(json.dumps(data, indent=2))
+
+        exercise_name = exercise.replace('_', ' ').title()
+        print(f"✓ Updated {exercise_name} to {weight}kg x {reps} reps")
+        print("\n✓ Workout data updated successfully!")
+        EOF
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install matplotlib numpy
+
+    - name: Generate charts
+      run: |
+        python scripts/generate_gym_charts.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add data/gym_lifts.json charts/
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update gym workout: ${{ inputs.exercise }} [skip ci]" && git push)
