@@ -38,7 +38,7 @@ def update_history(data):
     return data
 
 
-def generate_chart(exercise_key, exercise_data):
+def generate_chart(exercise_key, exercise_data, timestamp):
     """Generate crypto-style chart for bodyweight exercise"""
     history = exercise_data['history']
     current = exercise_data['current']
@@ -82,10 +82,11 @@ def generate_chart(exercise_key, exercise_data):
     setup_chart_style(ax, x_values)
 
     plt.tight_layout()
-    output_path = CHARTS_DIR / f"{exercise_key}.png"
+    output_path = CHARTS_DIR / f"{exercise_key}_{timestamp}.png"
     plt.savefig(output_path, dpi=300, bbox_inches='tight', facecolor='#0d1117')
     print(f"✓ {display_name} chart saved: {output_path}")
     plt.close()
+    return f"{exercise_key}_{timestamp}.png"
 
 
 def main():
@@ -103,12 +104,17 @@ def main():
     data = update_history(data)
 
     print("\nGenerating charts...")
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+    chart_filenames = {}
     for exercise_key, exercise_data in data.get('exercises', {}).items():
-        generate_chart(exercise_key, exercise_data)
+        filename = generate_chart(exercise_key, exercise_data, timestamp)
+        chart_filenames[exercise_key] = filename
 
     print("\n" + "=" * 50)
     print("Chart generation complete!")
     print("=" * 50)
+
+    return chart_filenames
 
 
 if __name__ == "__main__":
