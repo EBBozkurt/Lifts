@@ -66,9 +66,13 @@ jobs:
       run: |
         python scripts/generate_gym_charts.py
 
+    - name: Update README with cache-busting timestamps
+      run: |
+        python scripts/update_readme.py
+
     - name: Commit and push changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add data/gym_lifts.json charts/
+        git add data/gym_lifts.json charts/ README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update gym workout: ${{ inputs.exercise }} [skip ci]" && git push)

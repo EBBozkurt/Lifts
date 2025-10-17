@@ -6,6 +6,7 @@ Generates charts for bodyweight exercises (reps only)
 
 import matplotlib.pyplot as plt
 from pathlib import Path
+from datetime import datetime
 from common_utils import (
     load_data, save_data, setup_chart_style, add_change_indicator,
     get_trend_color, COLORS, DISPLAY_NAMES, CHARTS_DIR
@@ -41,7 +42,13 @@ def generate_chart(exercise_key, exercise_data):
     """Generate crypto-style chart for bodyweight exercise"""
     history = exercise_data['history']
     current = exercise_data['current']
-    all_values = history + [current]
+
+    # Only add current if it's different from last history value
+    if not history or history[-1] != current:
+        all_values = history + [current]
+    else:
+        all_values = history
+
     x_values = list(range(1, len(all_values) + 1))
 
     fig, ax = plt.subplots(figsize=(12, 7), facecolor='#0d1117')

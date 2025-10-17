@@ -31,11 +31,15 @@ jobs:
       run: |
         python scripts/generate_bw_charts.py
 
+    - name: Update README with cache-busting timestamps
+      run: |
+        python scripts/update_readme.py
+
     - name: Commit and push charts
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add charts/
+        git add charts/ README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update bodyweight charts [skip ci]" && git push)
 
   update-gym-charts:
@@ -60,9 +64,13 @@ jobs:
       run: |
         python scripts/generate_gym_charts.py
 
+    - name: Update README with cache-busting timestamps
+      run: |
+        python scripts/update_readme.py
+
     - name: Commit and push charts
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add charts/
+        git add charts/ README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update gym lift charts [skip ci]" && git push)

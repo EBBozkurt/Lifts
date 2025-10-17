@@ -1,8 +1,8 @@
 # Lifts
 
-> Crypto-style workout tracking with automated chart generation via GitHub Actions
+> Track lifts, push commits, merge gains - The vibecoder's workout tracker
 
-**[📖 How to Use](#how-to-use)**
+**[How to Use](#how-to-use)**
 
 ---
 
@@ -13,13 +13,13 @@
 <td width="50%">
 
 ### Pull Ups
-![Pull Ups](charts/pull_ups.png)
+![Pull Ups](charts/pull_ups.png?t=20251017131116)
 
 </td>
 <td width="50%">
 
 ### Dips
-![Dips](charts/dips.png)
+![Dips](charts/dips.png?t=20251017131116)
 
 </td>
 </tr>
@@ -27,13 +27,13 @@
 <td width="50%">
 
 ### Pushups
-![Pushups](charts/pushups.png)
+![Pushups](charts/pushups.png?t=20251017131116)
 
 </td>
 <td width="50%">
 
 ### Bodyweight Squats
-![Bodyweight Squats](charts/bodyweight_squats.png)
+![Bodyweight Squats](charts/bodyweight_squats.png?t=20251017131116)
 
 </td>
 </tr>
@@ -46,13 +46,13 @@
 <td width="50%">
 
 ### Bench Press
-![Bench Press](charts/bench_press.png)
+![Bench Press](charts/bench_press.png?t=20251017131116)
 
 </td>
 <td width="50%">
 
 ### Squat
-![Squat](charts/squat.png)
+![Squat](charts/squat.png?t=20251017131116)
 
 </td>
 </tr>
@@ -60,13 +60,13 @@
 <td width="50%">
 
 ### Deadlift
-![Deadlift](charts/deadlift.png)
+![Deadlift](charts/deadlift.png?t=20251017131116)
 
 </td>
 <td width="50%">
 
 ### Overhead Press
-![Overhead Press](charts/overhead_press.png)
+![Overhead Press](charts/overhead_press.png?t=20251017131116)
 
 </td>
 </tr>

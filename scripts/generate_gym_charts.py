@@ -47,7 +47,13 @@ def generate_chart(exercise_key, exercise_data):
     current_reps = exercise_data['current_reps']
 
     current_entry = {"weight": current_weight, "reps": current_reps}
-    all_entries = history + [current_entry]
+
+    # Only add current if it's different from last history entry
+    if not history or history[-1] != current_entry:
+        all_entries = history + [current_entry]
+    else:
+        all_entries = history
+
     x_values = list(range(1, len(all_entries) + 1))
 
     # Extract weights for plotting
