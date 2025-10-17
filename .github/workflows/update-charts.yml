@@ -8,6 +8,10 @@ on:
       - 'data/gym_lifts.json'
   workflow_dispatch:
 
+concurrency:
+  group: workout-updates
+  cancel-in-progress: false
+
 jobs:
   update-bw-charts:
     runs-on: ubuntu-latest
@@ -39,6 +43,7 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
+        git pull --rebase
         git add charts/ README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update bodyweight charts [skip ci]" && git push)
 
@@ -72,5 +77,6 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
+        git pull --rebase
         git add charts/ README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update gym lift charts [skip ci]" && git push)
