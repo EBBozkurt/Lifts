@@ -1,7 +1,7 @@
 {
   "exercises": {
     "bench_press": {
-      "current_weight": 70,
+      "current_weight": 80,
       "current_reps": 5,
       "history": [
         {
@@ -30,6 +30,10 @@
         },
         {
           "weight": 70,
+          "reps": 5
+        },
+        {
+          "weight": 80,
           "reps": 5
         }
       ]

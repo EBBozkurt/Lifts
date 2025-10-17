@@ -46,13 +46,13 @@
 <td width="50%">
 
 ### Bench Press
-![Bench Press](charts/bench_press_20251017131725.png)
+![Bench Press](charts/bench_press_20251017112530.png)
 
 </td>
 <td width="50%">
 
 ### Squat
-![Squat](charts/squat_20251017131725.png)
+![Squat](charts/squat_20251017112530.png)
 
 </td>
 </tr>
@@ -60,13 +60,13 @@
 <td width="50%">
 
 ### Deadlift
-![Deadlift](charts/deadlift_20251017131725.png)
+![Deadlift](charts/deadlift_20251017112530.png)
 
 </td>
 <td width="50%">
 
 ### Overhead Press
-![Overhead Press](charts/overhead_press_20251017131725.png)
+![Overhead Press](charts/overhead_press_20251017112530.png)
 
 </td>
 </tr>
