@@ -1,7 +1,7 @@
 {
   "exercises": {
     "pull_ups": {
-      "current": 22,
+      "current": 11,
       "history": [
         2,
         3,
@@ -12,11 +12,12 @@
         7,
         15,
         3,
-        22
+        22,
+        11
       ]
     },
     "dips": {
-      "current": 22,
+      "current": 11,
       "history": [
         5,
         7,
@@ -27,7 +28,8 @@
         10,
         20,
         6,
-        22
+        22,
+        11
       ]
     },
     "pushups": {
